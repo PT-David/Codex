@@ -1,0 +1,12 @@
+https://docling-project.github.io/docling/
+https://docling-project.github.io/docling/getting_started/installation/
+https://docling-project.github.io/docling/getting_started/quickstart/
+https://docling-project.github.io/docling/getting_started/rtx/
+https://docling-project.github.io/docling/usage/advanced_options/
+https://docling-project.github.io/docling/usage/supported_formats/
+https://docling-project.github.io/docling/usage/enrichments/
+https://docling-project.github.io/docling/usage/vision_models/
+https://docling-project.github.io/docling/usage/model_catalog/
+https://docling-project.github.io/docling/usage/gpu/
+https://docling-project.github.io/docling/usage/mcp/
+https://docling-project.github.io/docling/usage/jobkit/

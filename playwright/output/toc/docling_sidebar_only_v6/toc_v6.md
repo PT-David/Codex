@@ -1,0 +1,14 @@
+- Documentation
+  - Getting started
+    - [Installation](https://docling-project.github.io/docling/getting_started/installation/)
+    - [Quickstart](https://docling-project.github.io/docling/getting_started/quickstart/)
+    - [⚡ RTX GPU](https://docling-project.github.io/docling/getting_started/rtx/)
+  - Usage
+    - [Advanced options](https://docling-project.github.io/docling/usage/advanced_options/)
+    - [Supported formats](https://docling-project.github.io/docling/usage/supported_formats/)
+    - [Enrichment features](https://docling-project.github.io/docling/usage/enrichments/)
+    - [Vision models](https://docling-project.github.io/docling/usage/vision_models/)
+    - [Model catalog](https://docling-project.github.io/docling/usage/model_catalog/)
+    - [GPU support](https://docling-project.github.io/docling/usage/gpu/)
+    - [MCP server](https://docling-project.github.io/docling/usage/mcp/)
+    - [Jobkit](https://docling-project.github.io/docling/usage/jobkit/)

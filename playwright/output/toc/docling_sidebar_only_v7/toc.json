@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Documentation",
+    "url": "https://docling-project.github.io/docling/",
+    "children": []
+  },
+  {
+    "title": "Getting started",
+    "url": null,
+    "children": [
+      {
+        "title": "Installation",
+        "url": "https://docling-project.github.io/docling/getting_started/installation/",
+        "children": []
+      },
+      {
+        "title": "Quickstart",
+        "url": "https://docling-project.github.io/docling/getting_started/quickstart/",
+        "children": []
+      },
+      {
+        "title": "⚡ RTX GPU",
+        "url": "https://docling-project.github.io/docling/getting_started/rtx/",
+        "children": []
+      }
+    ]
+  },
+  {
+    "title": "Usage",
+    "url": null,
+    "children": [
+      {
+        "title": "Advanced options",
+        "url": "https://docling-project.github.io/docling/usage/advanced_options/",
+        "children": []
+      },
+      {
+        "title": "Supported formats",
+        "url": "https://docling-project.github.io/docling/usage/supported_formats/",
+        "children": []
+      },
+      {
+        "title": "Enrichment features",
+        "url": "https://docling-project.github.io/docling/usage/enrichments/",
+        "children": []
+      },
+      {
+        "title": "Vision models",
+        "url": "https://docling-project.github.io/docling/usage/vision_models/",
+        "children": []
+      },
+      {
+        "title": "Model catalog",
+        "url": "https://docling-project.github.io/docling/usage/model_catalog/",
+        "children": []
+      },
+      {
+        "title": "GPU support",
+        "url": "https://docling-project.github.io/docling/usage/gpu/",
+        "children": []
+      },
+      {
+        "title": "MCP server",
+        "url": "https://docling-project.github.io/docling/usage/mcp/",
+        "children": []
+      },
+      {
+        "title": "Jobkit",
+        "url": "https://docling-project.github.io/docling/usage/jobkit/",
+        "children": []
+      }
+    ]
+  }
+]
