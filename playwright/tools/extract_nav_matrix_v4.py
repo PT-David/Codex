@@ -68,6 +68,14 @@ def _normalize_part_toc(part_title: str, part_url: str, toc_tree: List[Dict[str,
     - [PartHome](part_url)
     - 其他 sidebar 分组/叶子
     """
+    def walk_urls(nodes: List[Dict[str, Any]], out: List[str]) -> List[str]:
+        for n in nodes:
+            u = (n.get("url") or "").strip()
+            if u:
+                out.append(u)
+            walk_urls(n.get("children") or [], out)
+        return out
+
     if not toc_tree:
         return [{"title": part_title, "url": part_url, "children": []}] if part_url else []
 
@@ -83,6 +91,11 @@ def _normalize_part_toc(part_title: str, part_url: str, toc_tree: List[Dict[str,
                 chapters.append({"title": root_title, "url": root_url, "children": []})
             chapters.extend(root.get("children") or [])
             return chapters
+
+    if part_url:
+        all_urls = set(walk_urls(toc_tree, []))
+        if part_url not in all_urls:
+            return [{"title": part_title, "url": part_url, "children": []}] + toc_tree
 
     return toc_tree
 

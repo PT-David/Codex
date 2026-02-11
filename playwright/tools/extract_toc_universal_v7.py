@@ -197,6 +197,12 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
       function isVisible(el) {
         if (!el) return false;
 
+        const style = window.getComputedStyle(el);
+        if (!style) return false;
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+      function isVisible(el) {
+        if (!el) return false;
+
         // 新版 Chromium 支持 checkVisibility：更接近“用户看到的可见性”
         try {
           if (typeof el.checkVisibility === "function") {
@@ -213,6 +219,8 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
         // 若祖先 aria-hidden=true，也视为不可见
         if (el.closest && el.closest('[aria-hidden="true"]')) return false;
 
+        return true;
+      }
         const rects = el.getClientRects();
         if (!rects || rects.length === 0) return false;
         const r = rects[0];
@@ -247,6 +255,7 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
       }
 
       let best = null;
+      let bestA = -1;
       let bestV = -1;
       let bestA = -1;
 
@@ -266,6 +275,13 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
 
         if (
           visBucket > bestBucket ||
+          (visBucket === bestBucket && allCount > bestA) ||
+          (visBucket === bestBucket && allCount === bestA && thisDepth < bestDepth)
+        ) {
+          best = ul;
+          bestA = allCount;
+        }
+      }
           (visBucket === bestBucket && visCount > bestV) ||
           (visBucket === bestBucket && visCount === bestV && allCount > bestA) ||
           (visBucket === bestBucket && visCount === bestV && allCount === bestA && thisDepth < bestDepth)
@@ -295,6 +311,16 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
         const out = [];
         const lis = Array.from(ul.children).filter(x => x.tagName && x.tagName.toLowerCase() === "li");
         for (const li of lis) {
+          let directA = li.querySelector(":scope > a[href]");
+          if (!directA) {
+            const candidates = Array.from(li.querySelectorAll("a[href]"));
+            for (const a of candidates) {
+              if (a.closest("li") === li) {
+                directA = a;
+                break;
+              }
+            }
+          }
           const directA = li.querySelector(":scope > a[href]");
           let title = "";
           let url = null;
@@ -352,6 +378,16 @@ def _extract_links_flat(root, prefer_visible: bool) -> List[Node]:
       }
       function cleanText(s) { return (s || "").replace(/\s+/g, " ").trim(); }
 
+      function isVisible(el) {
+        if (!el) return false;
+        const style = window.getComputedStyle(el);
+        if (!style) return false;
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+        if (el.hasAttribute("hidden")) return false;
+        if (el.getAttribute("aria-hidden") === "true") return false;
+        if (el.closest && el.closest('[aria-hidden="true"]')) return false;
+        return true;
+      }
       function isVisible(el) {
         if (!el) return false;
         try {
