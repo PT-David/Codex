@@ -200,6 +200,19 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
         const style = window.getComputedStyle(el);
         if (!style) return false;
         if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+      function isVisible(el) {
+        if (!el) return false;
+
+        // 新版 Chromium 支持 checkVisibility：更接近“用户看到的可见性”
+        try {
+          if (typeof el.checkVisibility === "function") {
+            if (!el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) return false;
+          }
+        } catch (e) {}
+
+        const style = window.getComputedStyle(el);
+        if (!style) return false;
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
         if (el.hasAttribute("hidden")) return false;
         if (el.getAttribute("aria-hidden") === "true") return false;
 
@@ -207,6 +220,11 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
         if (el.closest && el.closest('[aria-hidden="true"]')) return false;
 
         return true;
+      }
+        const rects = el.getClientRects();
+        if (!rects || rects.length === 0) return false;
+        const r = rects[0];
+        return (r.width > 0 && r.height > 0);
       }
 
       const uls = Array.from(root.querySelectorAll("ul"));
@@ -238,10 +256,18 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
 
       let best = null;
       let bestA = -1;
+      let bestV = -1;
+      let bestA = -1;
 
       for (const ul of uls) {
         const links = Array.from(ul.querySelectorAll("a[href]"));
         const allCount = links.length;
+        let visCount = 0;
+        if (preferVisible) {
+          for (const a of links) if (isVisible(a)) visCount++;
+        } else {
+          visCount = allCount;
+        }
         const visBucket = (preferVisible && !isVisible(ul)) ? 0 : 1;
         const bestBucket = best ? ((preferVisible && !isVisible(best)) ? 0 : 1) : -1;
         const thisDepth = depthFrom(ul, root);
@@ -253,6 +279,15 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
           (visBucket === bestBucket && allCount === bestA && thisDepth < bestDepth)
         ) {
           best = ul;
+          bestA = allCount;
+        }
+      }
+          (visBucket === bestBucket && visCount > bestV) ||
+          (visBucket === bestBucket && visCount === bestV && allCount > bestA) ||
+          (visBucket === bestBucket && visCount === bestV && allCount === bestA && thisDepth < bestDepth)
+        ) {
+          best = ul;
+          bestV = visCount;
           bestA = allCount;
         }
       }
@@ -286,6 +321,7 @@ def _extract_sidebar_tree(root, prefer_visible: bool) -> Optional[List[Node]]:
               }
             }
           }
+          const directA = li.querySelector(":scope > a[href]");
           let title = "";
           let url = null;
 
@@ -351,6 +387,24 @@ def _extract_links_flat(root, prefer_visible: bool) -> List[Node]:
         if (el.getAttribute("aria-hidden") === "true") return false;
         if (el.closest && el.closest('[aria-hidden="true"]')) return false;
         return true;
+      }
+      function isVisible(el) {
+        if (!el) return false;
+        try {
+          if (typeof el.checkVisibility === "function") {
+            if (!el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) return false;
+          }
+        } catch (e) {}
+        const style = window.getComputedStyle(el);
+        if (!style) return false;
+        if (style.display === "none" || style.visibility === "hidden" || style.opacity === "0") return false;
+        if (el.hasAttribute("hidden")) return false;
+        if (el.getAttribute("aria-hidden") === "true") return false;
+        if (el.closest && el.closest('[aria-hidden="true"]')) return false;
+        const rects = el.getClientRects();
+        if (!rects || rects.length === 0) return false;
+        const r = rects[0];
+        return (r.width > 0 && r.height > 0);
       }
 
       const out = [];

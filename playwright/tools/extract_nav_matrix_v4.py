@@ -192,6 +192,8 @@ def main() -> None:
     all_urls: List[str] = []
     for part in matrix["parts"]:
         md_lines.append(f"# {part['title']}")
+        if part.get("url"):
+            md_lines.append(f"- 入口：{part['url']}")
         toc = part.get("toc") or []
         if toc:
             md_lines.extend(_render_md(toc))
