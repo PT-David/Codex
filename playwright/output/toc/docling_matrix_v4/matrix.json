@@ -1,0 +1,601 @@
+{
+  "site": "https://docling-project.github.io/docling/",
+  "parts": [
+    {
+      "title": "Documentation",
+      "url": "https://docling-project.github.io/docling/",
+      "toc": [
+        {
+          "title": "Documentation",
+          "url": "https://docling-project.github.io/docling/",
+          "children": []
+        },
+        {
+          "title": "Getting started",
+          "url": null,
+          "children": [
+            {
+              "title": "Installation",
+              "url": "https://docling-project.github.io/docling/getting_started/installation/",
+              "children": []
+            },
+            {
+              "title": "Quickstart",
+              "url": "https://docling-project.github.io/docling/getting_started/quickstart/",
+              "children": []
+            },
+            {
+              "title": "⚡ RTX GPU",
+              "url": "https://docling-project.github.io/docling/getting_started/rtx/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "Usage",
+          "url": null,
+          "children": [
+            {
+              "title": "Advanced options",
+              "url": "https://docling-project.github.io/docling/usage/advanced_options/",
+              "children": []
+            },
+            {
+              "title": "Supported formats",
+              "url": "https://docling-project.github.io/docling/usage/supported_formats/",
+              "children": []
+            },
+            {
+              "title": "Enrichment features",
+              "url": "https://docling-project.github.io/docling/usage/enrichments/",
+              "children": []
+            },
+            {
+              "title": "Vision models",
+              "url": "https://docling-project.github.io/docling/usage/vision_models/",
+              "children": []
+            },
+            {
+              "title": "Model catalog",
+              "url": "https://docling-project.github.io/docling/usage/model_catalog/",
+              "children": []
+            },
+            {
+              "title": "GPU support",
+              "url": "https://docling-project.github.io/docling/usage/gpu/",
+              "children": []
+            },
+            {
+              "title": "MCP server",
+              "url": "https://docling-project.github.io/docling/usage/mcp/",
+              "children": []
+            },
+            {
+              "title": "Jobkit",
+              "url": "https://docling-project.github.io/docling/usage/jobkit/",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Concepts",
+      "url": "https://docling-project.github.io/docling/concepts/",
+      "toc": [
+        {
+          "title": "Concepts",
+          "url": "https://docling-project.github.io/docling/concepts/",
+          "children": []
+        },
+        {
+          "title": "Architecture",
+          "url": "https://docling-project.github.io/docling/concepts/architecture/",
+          "children": []
+        },
+        {
+          "title": "Docling Document",
+          "url": "https://docling-project.github.io/docling/concepts/docling_document/",
+          "children": []
+        },
+        {
+          "title": "Serialization",
+          "url": "https://docling-project.github.io/docling/concepts/serialization/",
+          "children": []
+        },
+        {
+          "title": "Confidence Scores",
+          "url": "https://docling-project.github.io/docling/concepts/confidence_scores/",
+          "children": []
+        },
+        {
+          "title": "Chunking",
+          "url": "https://docling-project.github.io/docling/concepts/chunking/",
+          "children": []
+        },
+        {
+          "title": "Plugins",
+          "url": "https://docling-project.github.io/docling/concepts/plugins/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "title": "Examples",
+      "url": "https://docling-project.github.io/docling/examples/",
+      "toc": [
+        {
+          "title": "Examples",
+          "url": "https://docling-project.github.io/docling/examples/",
+          "children": []
+        },
+        {
+          "title": "🔀 Conversion",
+          "url": null,
+          "children": [
+            {
+              "title": "Simple conversion",
+              "url": "https://docling-project.github.io/docling/examples/minimal/",
+              "children": []
+            },
+            {
+              "title": "Custom conversion",
+              "url": "https://docling-project.github.io/docling/examples/custom_convert/",
+              "children": []
+            },
+            {
+              "title": "Batch conversion",
+              "url": "https://docling-project.github.io/docling/examples/batch_convert/",
+              "children": []
+            },
+            {
+              "title": "Multi-format conversion",
+              "url": "https://docling-project.github.io/docling/examples/run_with_formats/",
+              "children": []
+            },
+            {
+              "title": "VLM pipeline with GraniteDocling",
+              "url": "https://docling-project.github.io/docling/examples/minimal_vlm_pipeline/",
+              "children": []
+            },
+            {
+              "title": "VLM pipeline with remote model",
+              "url": "https://docling-project.github.io/docling/examples/vlm_pipeline_api_model/",
+              "children": []
+            },
+            {
+              "title": "VLM comparison",
+              "url": "https://docling-project.github.io/docling/examples/compare_vlm_models/",
+              "children": []
+            },
+            {
+              "title": "ASR pipeline with Whisper",
+              "url": "https://docling-project.github.io/docling/examples/minimal_asr_pipeline/",
+              "children": []
+            },
+            {
+              "title": "Figure export",
+              "url": "https://docling-project.github.io/docling/examples/export_figures/",
+              "children": []
+            },
+            {
+              "title": "Table export",
+              "url": "https://docling-project.github.io/docling/examples/export_tables/",
+              "children": []
+            },
+            {
+              "title": "Multimodal export",
+              "url": "https://docling-project.github.io/docling/examples/export_multimodal/",
+              "children": []
+            },
+            {
+              "title": "Force full page OCR",
+              "url": "https://docling-project.github.io/docling/examples/full_page_ocr/",
+              "children": []
+            },
+            {
+              "title": "Automatic OCR language detection with tesseract",
+              "url": "https://docling-project.github.io/docling/examples/tesseract_lang_detection/",
+              "children": []
+            },
+            {
+              "title": "RapidOCR with custom OCR models",
+              "url": "https://docling-project.github.io/docling/examples/rapidocr_with_custom_models/",
+              "children": []
+            },
+            {
+              "title": "SuryaOCR with custom OCR models",
+              "url": "https://docling-project.github.io/docling/examples/suryaocr_with_custom_models/",
+              "children": []
+            },
+            {
+              "title": "Accelerator options",
+              "url": "https://docling-project.github.io/docling/examples/run_with_accelerator/",
+              "children": []
+            },
+            {
+              "title": "Detect and obfuscate PII",
+              "url": "https://docling-project.github.io/docling/examples/pii_obfuscate/",
+              "children": []
+            },
+            {
+              "title": "Simple translation",
+              "url": "https://docling-project.github.io/docling/examples/translate/",
+              "children": []
+            },
+            {
+              "title": "Conversion of CSV files",
+              "url": "https://docling-project.github.io/docling/examples/backend_csv/",
+              "children": []
+            },
+            {
+              "title": "Conversion of custom XML",
+              "url": "https://docling-project.github.io/docling/examples/backend_xml_rag/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "✂️ Serialization & chunking",
+          "url": null,
+          "children": [
+            {
+              "title": "Serialization",
+              "url": "https://docling-project.github.io/docling/examples/serialization/",
+              "children": []
+            },
+            {
+              "title": "Hybrid chunking",
+              "url": "https://docling-project.github.io/docling/examples/hybrid_chunking/",
+              "children": []
+            },
+            {
+              "title": "Advanced chunking & serialization",
+              "url": "https://docling-project.github.io/docling/examples/advanced_chunking_and_serialization/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "📤 Information extraction",
+          "url": null,
+          "children": [
+            {
+              "title": "Information extraction",
+              "url": "https://docling-project.github.io/docling/examples/extraction/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "🤖 RAG with AI dev frameworks",
+          "url": null,
+          "children": [
+            {
+              "title": "RAG with Haystack",
+              "url": "https://docling-project.github.io/docling/examples/rag_haystack/",
+              "children": []
+            },
+            {
+              "title": "RAG with LangChain",
+              "url": "https://docling-project.github.io/docling/examples/rag_langchain/",
+              "children": []
+            },
+            {
+              "title": "RAG with LlamaIndex",
+              "url": "https://docling-project.github.io/docling/examples/rag_llamaindex/",
+              "children": []
+            },
+            {
+              "title": "Visual grounding",
+              "url": "https://docling-project.github.io/docling/examples/visual_grounding/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "🖼️ Picture annotation",
+          "url": null,
+          "children": [
+            {
+              "title": "Annotate picture with local VLM",
+              "url": "https://docling-project.github.io/docling/examples/pictures_description/",
+              "children": []
+            },
+            {
+              "title": "Annotate picture with remote VLM",
+              "url": "https://docling-project.github.io/docling/examples/pictures_description_api/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "🔤 Enrichments",
+          "url": null,
+          "children": [
+            {
+              "title": "Code & formula",
+              "url": "https://docling-project.github.io/docling/examples/code_formula_granite_docling/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "✨ Enrichment development",
+          "url": null,
+          "children": [
+            {
+              "title": "Figure enrichment",
+              "url": "https://docling-project.github.io/docling/examples/develop_picture_enrichment/",
+              "children": []
+            },
+            {
+              "title": "Formula enrichment",
+              "url": "https://docling-project.github.io/docling/examples/develop_formula_understanding/",
+              "children": []
+            },
+            {
+              "title": "Enrich a DoclingDocument",
+              "url": "https://docling-project.github.io/docling/examples/enrich_doclingdocument/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "⚡️ GPU optimization",
+          "url": null,
+          "children": [
+            {
+              "title": "Standard pipeline",
+              "url": "https://docling-project.github.io/docling/examples/gpu_standard_pipeline/",
+              "children": []
+            },
+            {
+              "title": "VLM pipeline",
+              "url": "https://docling-project.github.io/docling/examples/gpu_vlm_pipeline/",
+              "children": []
+            },
+            {
+              "title": "Parquet benchmark",
+              "url": "https://docling-project.github.io/docling/examples/parquet_images/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "🗂️ More examples",
+          "url": null,
+          "children": [
+            {
+              "title": "Chunking & tokenization with Data Prep Kit",
+              "url": "https://docling-project.github.io/docling/examples/dpk-ingest-chunk-tokenize/",
+              "children": []
+            },
+            {
+              "title": "RAG with Azure AI Search",
+              "url": "https://docling-project.github.io/docling/examples/rag_azuresearch/",
+              "children": []
+            },
+            {
+              "title": "RAG with Milvus",
+              "url": "https://docling-project.github.io/docling/examples/rag_milvus/",
+              "children": []
+            },
+            {
+              "title": "RAG with OpenSearch",
+              "url": "https://docling-project.github.io/docling/examples/rag_opensearch/",
+              "children": []
+            },
+            {
+              "title": "RAG with Weaviate",
+              "url": "https://docling-project.github.io/docling/examples/rag_weaviate/",
+              "children": []
+            },
+            {
+              "title": "Retrieval with Qdrant",
+              "url": "https://docling-project.github.io/docling/examples/retrieval_qdrant/",
+              "children": []
+            },
+            {
+              "title": "RAG with MongoDB + VoyageAI",
+              "url": "https://docling-project.github.io/docling/examples/rag_mongodb/",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Integrations",
+      "url": "https://docling-project.github.io/docling/integrations/",
+      "toc": [
+        {
+          "title": "Integrations",
+          "url": "https://docling-project.github.io/docling/integrations/",
+          "children": []
+        },
+        {
+          "title": "🤖 Agentic / AI dev frameworks",
+          "url": null,
+          "children": [
+            {
+              "title": "Bee Agent Framework",
+              "url": "https://docling-project.github.io/docling/integrations/bee/",
+              "children": []
+            },
+            {
+              "title": "Crew AI",
+              "url": "https://docling-project.github.io/docling/integrations/crewai/",
+              "children": []
+            },
+            {
+              "title": "Haystack",
+              "url": "https://docling-project.github.io/docling/integrations/haystack/",
+              "children": []
+            },
+            {
+              "title": "Hector",
+              "url": "https://docling-project.github.io/docling/integrations/hector/",
+              "children": []
+            },
+            {
+              "title": "LangChain",
+              "url": "https://docling-project.github.io/docling/integrations/langchain/",
+              "children": []
+            },
+            {
+              "title": "Langflow",
+              "url": "https://docling-project.github.io/docling/integrations/langflow/",
+              "children": []
+            },
+            {
+              "title": "LlamaIndex",
+              "url": "https://docling-project.github.io/docling/integrations/llamaindex/",
+              "children": []
+            },
+            {
+              "title": "Semantica",
+              "url": "https://docling-project.github.io/docling/integrations/semantica/",
+              "children": []
+            },
+            {
+              "title": "txtai",
+              "url": "https://docling-project.github.io/docling/integrations/txtai/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "⭐️ Featured",
+          "url": null,
+          "children": [
+            {
+              "title": "Apify",
+              "url": "https://docling-project.github.io/docling/integrations/apify/",
+              "children": []
+            },
+            {
+              "title": "Data Prep Kit",
+              "url": "https://docling-project.github.io/docling/integrations/data_prep_kit/",
+              "children": []
+            },
+            {
+              "title": "InstructLab",
+              "url": "https://docling-project.github.io/docling/integrations/instructlab/",
+              "children": []
+            },
+            {
+              "title": "NVIDIA",
+              "url": "https://docling-project.github.io/docling/integrations/nvidia/",
+              "children": []
+            },
+            {
+              "title": "Prodigy",
+              "url": "https://docling-project.github.io/docling/integrations/prodigy/",
+              "children": []
+            },
+            {
+              "title": "RHEL AI",
+              "url": "https://docling-project.github.io/docling/integrations/rhel_ai/",
+              "children": []
+            },
+            {
+              "title": "spaCy",
+              "url": "https://docling-project.github.io/docling/integrations/spacy/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "🗂️ More integrations",
+          "url": null,
+          "children": [
+            {
+              "title": "Arconia",
+              "url": "https://docling-project.github.io/docling/integrations/arconia/",
+              "children": []
+            },
+            {
+              "title": "Cloudera",
+              "url": "https://docling-project.github.io/docling/integrations/cloudera/",
+              "children": []
+            },
+            {
+              "title": "DocETL",
+              "url": "https://docling-project.github.io/docling/integrations/docetl/",
+              "children": []
+            },
+            {
+              "title": "Kotaemon",
+              "url": "https://docling-project.github.io/docling/integrations/kotaemon/",
+              "children": []
+            },
+            {
+              "title": "OpenContracts",
+              "url": "https://docling-project.github.io/docling/integrations/opencontracts/",
+              "children": []
+            },
+            {
+              "title": "Open WebUI",
+              "url": "https://docling-project.github.io/docling/integrations/openwebui/",
+              "children": []
+            },
+            {
+              "title": "Quarkus",
+              "url": "https://docling-project.github.io/docling/integrations/quarkus/",
+              "children": []
+            },
+            {
+              "title": "Vectara",
+              "url": "https://docling-project.github.io/docling/integrations/vectara/",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reference",
+      "url": "https://docling-project.github.io/docling/reference/document_converter/",
+      "toc": [
+        {
+          "title": "Reference",
+          "url": "https://docling-project.github.io/docling/reference/document_converter/",
+          "children": []
+        },
+        {
+          "title": "Python API",
+          "url": null,
+          "children": [
+            {
+              "title": "Document Converter",
+              "url": "https://docling-project.github.io/docling/reference/document_converter/",
+              "children": []
+            },
+            {
+              "title": "Pipeline options",
+              "url": "https://docling-project.github.io/docling/reference/pipeline_options/",
+              "children": []
+            },
+            {
+              "title": "Docling Document",
+              "url": "https://docling-project.github.io/docling/reference/docling_document/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "title": "CLI",
+          "url": null,
+          "children": [
+            {
+              "title": "CLI reference",
+              "url": "https://docling-project.github.io/docling/reference/cli/",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

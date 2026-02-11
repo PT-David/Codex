@@ -1,4 +1,3 @@
-https://docling-project.github.io/docling/
 https://docling-project.github.io/docling/getting_started/installation/
 https://docling-project.github.io/docling/getting_started/quickstart/
 https://docling-project.github.io/docling/getting_started/rtx/
